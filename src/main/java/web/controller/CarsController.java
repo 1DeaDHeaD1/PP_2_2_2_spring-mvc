@@ -10,8 +10,12 @@ import web.service.CarService;
 @Controller
 public class CarsController {
 
+    private final CarService carService;
+
     @Autowired
-    CarService carService;
+    public CarsController(CarService carService) {
+        this.carService = carService;
+    }
 
 	@GetMapping(value = "/cars")
 	public String printCars(ModelMap model) {

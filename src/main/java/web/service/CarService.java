@@ -19,7 +19,7 @@ public class CarService {
     }
 
     public List<Car> getCarList(int count) {
-        return count > 0 && count < cars.size() ? cars.subList(0, count) : cars;
+        return count >= 0 && count < cars.size() ? cars.subList(0, count) : cars;
     }
 
 }
